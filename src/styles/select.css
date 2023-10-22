@@ -1,0 +1,26 @@
+
+ul li {
+  position: relative;
+  width: 100px;
+  height: 42px;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, .1),
+  inset -2px -5px 10px rgba(255, 255, 255, 1),
+  15px 15px 10px rgba(0, 0, 0, .05),
+  15px 10px 15px rgba(0, 0, 0, .05);
+  border-radius: 25px;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.select-options li:nth-last-child(1) {
+  background-color: white;
+}
