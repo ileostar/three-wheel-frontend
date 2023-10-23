@@ -8,6 +8,20 @@ export default function Footer() {
         target="_blank"
         title="GitHub"
       />
+      <a
+        className="icon-btn i-carbon-user-avatar-filled"
+        rel="noreferrer"
+        href="https://liuxinghao.top/"
+        target="_blank"
+        title="MyPage"
+      />
+      <a
+        className="icon-btn i-carbon-earth-filled"
+        rel="noreferrer"
+        href="https://blog.liuxinghao.top/"
+        target="_blank"
+        title="Blog"
+      />
     </nav>
 
   )

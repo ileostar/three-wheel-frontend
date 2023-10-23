@@ -21,20 +21,7 @@ export default defineConfig({
     react(),
 
     // https://github.com/hannoeru/vite-plugin-pages
-    Pages({
-
-      extendRoute(route, _parent) {
-        if (route.path === '/') {
-          // Index is unauthenticated.
-          return route
-        }
-        // Augment the route with meta that indicates that the route requires authentication.
-        return {
-          ...route,
-          meta: { auth: true },
-        }
-      },
-    }),
+    Pages(),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
