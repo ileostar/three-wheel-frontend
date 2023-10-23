@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <nav className="fixed bottom-5 text-xl mt-6 inline-flex gap-2">
+    <nav className="text-xl mt-4 inline-flex gap-3">
       <a
         className="icon-btn i-carbon-logo-github"
         rel="noreferrer"

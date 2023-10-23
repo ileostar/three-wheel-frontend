@@ -21,28 +21,30 @@ export default function Index() {
   }
 
   return (
-    <div className="flex justify-center items-center flex-col w-full h-full">
-      <div className="px-5 w-fullrd-8 m-5 text-5 px-5 font-400 w-full h-15">
-        <div className="flex justify-between rd-8 h-15 bg-blue-100/50 text-start px-6 border-blue-100/50">
+    <div className="box-border flex justify-between items-center flex-col w-screen h-screen overflow-hidden px-10">
+      <div className="box-border w-fullrd-8 mb-5 text-5 font-400 w-full h-15">
+        <div className="flex justify-between px-5 rd-5 h-15 bg-white-100/60 text-start border-white-100/50 border-1 g-glossy">
           <div className="flex items-center h-15">
-            <span className="i-carbon-pedestrian text-4xl inline-block"></span>
-            <p className="mr-5 font-bold">用户管理页面</p>
+            <span className="i-streamline-emojis-crazy-face text-3xl mr-3 inline-block text-gray-700 h-10 w-10"></span>
+            <p className="mr-5 font-bold text-gray-700">用户管理页面</p>
           </div>
           <div className="flex items-center h-15">
-            <button className="mr-5 font-bold">退出登录</button>
+            <button className="i-streamline-emojis-cross-mark mr-5 text-gray-700 h-9 w-9" title="退出登陆" />
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center flex-between w-full h-full p-7 p-t-0">
-        <div className="rd-8 mr-5 bg-blue-100/50 w-23 h-full flex justify-start items-center flex-col p-5 box-border border-2 border-blue-100/50">
-          <button className={`h-13 w-13 i-streamline-emojis-confetti-ball icon-btn icon-btn ${clickBtn(0)}`}
-            onClick={() => handleClick(0)} title="基础表格"/>
-          <button className={`h-13 w-13 mt-4 i-streamline-emojis-bar-chart icon-btn ${clickBtn(1)}`}
-            onClick={() => handleClick(1)} title="可视化数据"/>
+      <div className="box-border w-full h-full flex-1">
+        <div className=" overflow-hidden box-border flex items-center justify-center flex-between w-full h-full">
+          <div className="box-border rd-5 mr-5 bg-white-100/60 w-23 h-full flex justify-start items-center flex-col p-5 box-border border-2 border-white-100/50 g-glossy">
+            <button className={`h-12 w-12 i-streamline-emojis-confetti-ball icon-btn icon-btn ${clickBtn(0)}`}
+              onClick={() => handleClick(0)} title="基础表格"/>
+            <button className={`h-12 w-12 mt-4 i-streamline-emojis-bar-chart icon-btn ${clickBtn(1)}`}
+              onClick={() => handleClick(1)} title="可视化数据"/>
+          </div>
+          <main className="box-border overflow-hidden rd-5 bg-white-100/60 flex w-full h-full justify-center items-center border-2 border-white-100/50 g-glossy">
+              {renderContent()}
+          </main>
         </div>
-        <main className="rd-8 bg-blue-100/50 flex w-full h-full justify-center items-center border-2 border-blue-100/50">
-            {renderContent()}
-        </main>
       </div>
     </div>
   )

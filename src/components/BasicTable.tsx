@@ -92,8 +92,9 @@ const onChange: TableProps<DataType>['onChange'] = (pagination, filters, sorter,
 }
 export default function Footer() {
   return (
-    <div className="flex justify-center flex-between h-full w-full p-5 px-10 flex-col">
-        <Table className="h-full" size="large" columns={columns} dataSource={data} onChange={onChange} />
+    <div className="overflow-hidden flex justify-center flex-between h-full w-full p-8 flex-col">
+        <Table className="h-full overflow-hidden" size="small" columns={columns} dataSource={data} onChange={onChange} bordered
+    title={() => '学生信息列表'} />
     </div>
 
   )

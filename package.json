@@ -4,13 +4,24 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite --port 3333",
-    "lint": "eslint .",
+    "lint": "eslint --ext .ts,.tsx,.vue,.js,.jsx src --fix",
     "typecheck": "tsc --noEmit",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "commit": "git add . & git-cz",
+    "push": "git push",
+    "postinstall": "simple-git-hooks"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-emoji"
+    }
   },
   "dependencies": {
+    "alova": "^2.13.1",
     "antd": "^5.10.2",
+    "highcharts": "^11.1.0",
+    "highcharts-react-official": "^3.2.1",
     "re-select": "^0.5.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -27,8 +38,12 @@
     "@types/react-dom": "^18.0.4",
     "@unocss/reset": "^0.34.0",
     "@vitejs/plugin-react": "^1.3.2",
+    "commitizen": "^4.3.0",
+    "cz-emoji": "1.3.2-canary.2",
     "eslint": "^8.16.0",
     "jsdom": "^19.0.0",
+    "lint-staged": "^15.0.2",
+    "simple-git-hooks": "^2.9.0",
     "typescript": "^4.6.4",
     "unocss": "^0.34.0",
     "unplugin-auto-import": "^0.7.2",
@@ -38,5 +53,12 @@
   },
   "eslintConfig": {
     "extends": "@antfu"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": "eslint --fix"
   }
 }

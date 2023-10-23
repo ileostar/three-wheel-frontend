@@ -9,25 +9,29 @@ export default function Register() {
     navigate('/')
   }
   return (
-    <div className="container">
-      <div className="drop">
-        <div className="content">
-          <h2>登陆</h2>
-          <form>
-            <div className="inputBox">
-              <input type="text" placeholder="学号" />
+    <div className="flex w-full h-full justify-center items-center">
+      <div className="container">
+        <div className="w-auto h-auto">
+          <div className="drop">
+            <div className="content">
+              <h2>登陆</h2>
+              <form>
+                <div className="inputBox">
+                  <input type="text" placeholder="学号" />
+                </div>
+                <div className="inputBox">
+                  <input type="password" placeholder="密码" />
+                </div>
+                <div className="inputBox">
+                  <input type="submit" value="登陆" onClick={() => goHome()}/>
+                </div>
+              </form>
             </div>
-            <div className="inputBox">
-              <input type="password" placeholder="密码" />
-            </div>
-            <div className="inputBox">
-              <input type="submit" value="登陆" onClick={() => goHome()}/>
-            </div>
-          </form>
+          </div>
+          <span className="btns signup"></span>
+          <button onClick={() => go()} className="btns"><p className="text-5">注册</p></button>
         </div>
       </div>
-      <span className="btns signup"></span>
-      <button onClick={() => go()} className="btns"><p className="text-5">注册</p></button>
     </div>
   )
 }

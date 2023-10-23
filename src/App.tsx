@@ -5,7 +5,7 @@ import routes from '~react-pages'
 
 export default function App() {
   return (
-    <main className="flex justify-center items-center flex-col font-sans pb-10 w-screen h-screen text-center text-gray-700 dark:text-gray-200">
+    <main className="Index flex justify-between items-center flex-col font-sans w-screen h-screen text-center text-gray-700 dark:text-gray-200 box-border">
         <Router>
           <Routes />
         </Router>
