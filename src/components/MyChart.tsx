@@ -8,7 +8,8 @@ import HCMore from 'highcharts/highcharts-more'
 Highcharts3D(Highcharts)
 HCMore(Highcharts)
 
-const MyChartComponent = () => {
+// eslint-disable-next-line react/prop-types
+const MyChartComponent = ({ arrGrade = [29.9, 72, 106.4, 170.2] }) => {
   useEffect(() => {
     const chart = new Highcharts.Chart({
       chart: {
@@ -26,7 +27,7 @@ const MyChartComponent = () => {
         },
       },
       title: {
-        text: '交互性3D柱状图',
+        text: '年级人数比',
       },
       credits: {
         enabled: false,
@@ -37,8 +38,11 @@ const MyChartComponent = () => {
         },
       },
       series: [{
-        name: '图例1',
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        name: '男',
+        data: arrGrade,
+      }, {
+        name: '女',
+        data: arrGrade,
       }],
     })
 
@@ -73,19 +77,19 @@ const MyChartComponent = () => {
   }, [])
 
   return (
-    <div>
+    <div className="flex flex-grow flex-col">
       <div id="container" />
-      <div id="sliders" className="flex p-2 justify-between items-center text-gray-700 mt-2 gap-1">
+      <div id="sliders" className="flex h-full overflow-hidden p-2 justify-between items-center text-gray-700 mt-2 gap-1 flex-grow px-5">
         <label htmlFor="alpha" className="text-3">Alpha:</label>
-        <input type="range" id="alpha" min="10" max="45" step="1" defaultValue="15" />
+        <input type="range" id="alpha" min="0" max="45" step="1" defaultValue="15" />
         <span id="alpha-value" className="w-3 text-3" />
 
         <label htmlFor="beta" className="text-3">Beta:</label>
-        <input type="range" id="beta" min="10" max="45" step="1" defaultValue="15" />
+        <input type="range" id="beta" min="0" max="45" step="1" defaultValue="15" />
         <span id="beta-value" className="w-3 text-3" />
 
         <label htmlFor="depth" className="text-3">Depth:</label>
-        <input type="range" id="depth" min="15" max="99" step="1" defaultValue="50" />
+        <input type="range" id="depth" min="10" max="99" step="1" defaultValue="50" />
         <span id="depth-value" className="w-3 text-3" />
       </div>
     </div>

@@ -34,7 +34,7 @@ export default function Index() {
         </div>
       </div>
       <div className="box-border w-full h-full flex-1">
-        <div className=" overflow-hidden box-border flex items-center justify-center flex-between w-full h-full">
+        <div className="box-border flex items-center justify-center flex-between w-full h-full">
           <div className="box-border rd-5 mr-5 bg-white-100/60 w-20 h-full flex justify-start items-center flex-col p-5 box-border border-2 border-white-100/50 g-glossy">
             <button className={`h-12 w-12 i-streamline-emojis-clipboard icon-btn icon-btn ${clickBtn(0)}`}
               onClick={() => handleClick(0)} title="基础表格"/>

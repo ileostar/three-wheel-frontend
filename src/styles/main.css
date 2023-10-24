@@ -25,3 +25,7 @@ background-blend-mode: screen, screen, lighten, overlay, lighten, difference, no
   box-shadow:  10px 10px 20px #bebebe,
               -10px -10px 20px #ffffff;
 }
+
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
