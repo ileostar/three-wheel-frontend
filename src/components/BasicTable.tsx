@@ -3,6 +3,7 @@ import { Table } from 'antd'
 import type { ColumnsType, TableProps } from 'antd/es/table'
 
 interface DataType {
+  key: number
   stuName: string
   stuNum: number
   sex: string
@@ -43,6 +44,7 @@ const columns: ColumnsType<DataType> = [
 
 const data: DataType[] = [
   {
+    key: 1,
     stuName: '张三',
     stuNum: 123,
     sex: '男',
@@ -50,6 +52,7 @@ const data: DataType[] = [
     grade: 2022,
   },
   {
+    key: 2,
     stuName: '张三',
     stuNum: 123,
     sex: '男',
@@ -57,6 +60,7 @@ const data: DataType[] = [
     grade: 2022,
   },
   {
+    key: 3,
     stuName: '张三',
     stuNum: 123,
     sex: '男',
@@ -64,6 +68,7 @@ const data: DataType[] = [
     grade: 2022,
   },
   {
+    key: 4,
     stuName: '张三',
     stuNum: 123,
     sex: '男',
@@ -71,6 +76,7 @@ const data: DataType[] = [
     grade: 2022,
   },
   {
+    key: 5,
     stuName: '张三',
     stuNum: 123,
     sex: '男',
@@ -78,6 +84,7 @@ const data: DataType[] = [
     grade: 2022,
   },
   {
+    key: 6,
     stuName: '张三',
     stuNum: 123,
     sex: '男',
@@ -96,6 +103,5 @@ export default function Footer() {
         <Table className="h-full overflow-hidden" size="small" columns={columns} dataSource={data} onChange={onChange} bordered
     title={() => '学生信息列表'} />
     </div>
-
   )
 }
