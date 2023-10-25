@@ -79,18 +79,23 @@ const MyChartComponent = ({ arrGrade = [29.9, 72, 106.4, 170.2] }) => {
   return (
     <div className="flex flex-grow flex-col">
       <div id="container" />
-      <div id="sliders" className="flex h-full overflow-hidden p-2 justify-between items-center text-gray-700 mt-2 gap-1 flex-grow px-5">
-        <label htmlFor="alpha" className="text-3">Alpha:</label>
-        <input type="range" id="alpha" min="0" max="45" step="1" defaultValue="15" />
-        <span id="alpha-value" className="w-3 text-3" />
+      <div id="sliders" className="box-border flex h-full overflow-hidden p-2 justify-between items-center text-gray-700 mt-2 gap-1 flex-grow mx-5">
+        <div className="flex items-center gap-1">
+          <label htmlFor="alpha" className="text-3">Alpha:</label>
+          <input type="range" id="alpha" min="0" max="45" step="1" defaultValue="15" />
+          <span id="alpha-value" className="w-3 text-3" />
+        </div>
 
-        <label htmlFor="beta" className="text-3">Beta:</label>
-        <input type="range" id="beta" min="0" max="45" step="1" defaultValue="15" />
-        <span id="beta-value" className="w-3 text-3" />
-
-        <label htmlFor="depth" className="text-3">Depth:</label>
-        <input type="range" id="depth" min="10" max="99" step="1" defaultValue="50" />
-        <span id="depth-value" className="w-3 text-3" />
+        <div className="flex items-center gap-1">
+          <label htmlFor="beta" className="text-3">Beta:</label>
+          <input type="range" id="beta" min="0" max="45" step="1" defaultValue="15" />
+          <span id="beta-value" className="w-3 text-3" />
+        </div>
+        <div className="flex items-center gap-1">
+          <label htmlFor="depth" className="text-3">Depth:</label>
+          <input type="range" id="depth" min="10" max="99" step="1" defaultValue="50" />
+          <span id="depth-value" className="w-3 text-3" />
+        </div>
       </div>
     </div>
   )
