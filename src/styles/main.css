@@ -29,3 +29,35 @@ background-blend-mode: screen, screen, lighten, overlay, lighten, difference, no
 ::-webkit-scrollbar {
   display: none; /* Chrome Safari */
 }
+
+
+body {
+cursor:url('https://images.liuxinghao.top/mouse/default.ico'),
+	 default;
+-ms-overflow-style: none;
+}
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a,
+img,
+.btn,
+.ic,
+.info,
+.icon-btn,
+button {
+cursor:url('https://images.liuxinghao.top/mouse/pointer.ico'),
+	 default;
+}
+
+.SearchBox {
+  box-shadow:  5px 5px 10px #c3c3c3,
+              -5px -5px 10px #fdfdfd;
+}
+
